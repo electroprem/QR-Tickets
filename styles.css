@@ -16,6 +16,7 @@ main {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
 }
 
 section {
@@ -23,12 +24,18 @@ section {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     padding: 20px;
     text-align: center;
-    width: 45%;
+    width: 45%; /* Adjust width as necessary */
+    margin-bottom: 20px; /* Add space between sections */
 }
 
-.ticket-image img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.ticket-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ticket-images img {
+    max-width: calc(200px); /* Ensure each image takes up to half of the section's width minus padding */
+    margin-bottom: 200px; /* Add space between images */
+    box-shadow: 0 0 5px rgba(0,0,0,0.2); /* Add a subtle shadow to each image */
 }
